@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UDB_SITE.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Universidad Don Bosco</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+      
+        <br /><br /><br />
+
+   
+
+
+        <div class="container body-content">
+
+
+
+            <hr />
+
+            <!-- Contenido central -->
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+           
+        </div>
+   <footer>
+        <div class="row">
+            <div style="padding:10px 40px; text-align:justify;" class="col-sm-4 bg-primary text-white footer-content">
+                <center>
+                    <img style="width:25%;" class="img-responsive" src="https://i.ibb.co/Tc7W0VJ/logo-universidaddonbosco.png" />
+                </center>
+                <p>El Modelo Educativo UDB es un referente que reúne la experiencia educativa de Don Bosco, la naturaleza y las tendencias de la Educación Superior; así como las opciones de la Iglesia y el contexto con el fin de guiar el hecho educativo.</p>
+            </div>
+
+            <div style="padding:10px 40px; text-align:justify;" class="col-sm-4 bg-dark text-white footer-content">
+                <br />
+                <h4 style="text-align:center;">Contáctanos</h4>
+                <p>Ciudadela Don Bosco, Soyapango, San Salvador.</p>
+                <p><span class="glyphicon glyphicon-earphone"></span>Teléfono : (503) 2251-8253</p>
+                <p><span class="glyphicon glyphicon-send"></span> E-mail : udbvirtual@udb.edu.sv</p>
+            </div>
+
+            <div style="padding:10px 40px; text-align:justify;" class="col-sm-4 bg-primary text-white footer-content">
+                <center>
+                    <a href="https://es-la.facebook.com/UDBelsalvador/">
+                        <img style="width:15%; padding-top:20px;" src="https://i.ibb.co/Tg65HsD/20673.png" />
+                    </a>
+                    
+                    <br /><br />
+                    <h4>Facebook</h4>
+                </center>
+             
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
